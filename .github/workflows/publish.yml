@@ -53,30 +53,10 @@ jobs:
       with:
         name: mac
         path: ./out/make/zip/darwin/x64/*.zip
-
-  build-windows:
-
-    runs-on: windows-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js 15.x
-      uses: actions/setup-node@v1
-      with:
-        node-version: 15.x
-    - name: Install dependencies
-      run: npm ci
-    - name: Create Distributable
-      run: npm run make
-    - name: Upload Artifacts
-      uses: actions/upload-artifact@master
-      with:
-        name: win
-        path: ./out/make/
         
   publish:
     
-    needs: [build-ubuntu, build-mac, build-windows]
+    needs: [build-ubuntu, build-mac]
     
     runs-on: ubuntu-latest
     
