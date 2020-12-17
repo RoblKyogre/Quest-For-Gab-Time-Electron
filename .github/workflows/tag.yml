@@ -5,7 +5,8 @@ name: Build and Publish Release
 
 on:
   push:
-    branches: [ master ]
+    tags:
+      - "v*"
 
 jobs:
 
@@ -54,7 +55,7 @@ jobs:
         name: mac
         path: ./out/make/zip/darwin/x64/*.zip
 
-  publish:
+  publish-tagged-release:
     
     needs: [build-ubuntu, build-mac]
     
@@ -65,13 +66,11 @@ jobs:
         uses: actions/download-artifact@v2
       - name: Display structure of downloaded files
         run: ls -R
-      - name: Publish Release
+      - name: Publish Tagged Release
         uses: marvinpinto/action-automatic-releases@latest
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "latest"
-          prerelease: true
-          title: "Latest Build"
+          prerelease: false
           files: |
             ./deb/*.deb
             ./rpm/*.rpm
