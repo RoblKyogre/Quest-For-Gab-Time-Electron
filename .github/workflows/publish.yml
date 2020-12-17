@@ -6,8 +6,6 @@ name: Build and Publish Release
 on:
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
 
 jobs:
 
@@ -25,12 +23,16 @@ jobs:
       run: npm ci
     - name: Create Distributable
       run: npm run make
-    - name: Upload Artifacts
+    - name: Upload .deb Artifact
       uses: actions/upload-artifact@master
       with:
         name: deb
-        path: |
-          ./out/make/deb/x64/quest-for-gab-time_0.1.0_amd64.deb
+        path: ./out/make/deb/x64/*.deb
+    - name: Upload .rpm Artifact
+      uses: actions/upload-artifact@master
+      with:
+        name: rpm
+        path: ./out/make/rpm/x64/*.rpm
   
   build-mac:
 
@@ -46,13 +48,11 @@ jobs:
       run: npm ci
     - name: Create Distributable
       run: npm run make
-    - run: ls -R
     - name: Upload Artifacts
       uses: actions/upload-artifact@master
       with:
-        name: dmg
-        path: |
-          ./out/make/
+        name: mac
+        path: ./out/make/zip/darwin/x64/*.zip
 
   publish:
     
@@ -63,6 +63,16 @@ jobs:
     steps:
       - name: Download Artifacts
         uses: actions/download-artifact@v2
-    
       - name: Display structure of downloaded files
         run: ls -R
+      - name: Publish Release
+        uses: marvinpinto/action-automatic-releases@latest
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "latest"
+          prerelease: false
+          title: "Latest Build"
+          files: |
+            ./deb/*.deb
+            ./rpm/*.rpm
+            ./mac/*.zip
