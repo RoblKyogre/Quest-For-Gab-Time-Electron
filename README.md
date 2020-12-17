@@ -6,10 +6,9 @@ To set this up, first navigate to the git repository:
 ```
 cd Quest-For-Gab-Time
 ``` 
-Then, run the following command(s): 
+Then, run the following command to install the required packages: 
 ```
-npm init -y
-npm i --save-dev electron
+npm ci
 ```
 To run it:
 ```
