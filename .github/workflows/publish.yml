@@ -25,4 +25,4 @@ jobs:
     - name: Create Distributable
       run: npm run make
     - name: Tree
-      run: tree
+      run: ls
