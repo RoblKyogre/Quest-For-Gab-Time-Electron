@@ -1,0 +1,55 @@
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Build
+
+on:
+  pull_request:
+    branches: [ master ]
+
+jobs:
+
+  build-ubuntu:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js 15.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: 15.x
+    - name: Install dependencies
+      run: npm ci
+    - name: Create Distributable
+      run: npm run make
+    - name: Upload .deb Artifact
+      uses: actions/upload-artifact@master
+      with:
+        name: deb
+        path: ./out/make/deb/x64/*.deb
+    - name: Upload .rpm Artifact
+      uses: actions/upload-artifact@master
+      with:
+        name: rpm
+        path: ./out/make/rpm/x64/*.rpm
+  
+  build-mac:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js 15.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: 15.x
+    - name: Install dependencies
+      run: npm ci
+    - name: Create Distributable
+      run: npm run make
+    - name: Upload Artifacts
+      uses: actions/upload-artifact@master
+      with:
+        name: mac
+        path: ./out/make/zip/darwin/x64/*.zip
