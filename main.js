@@ -1,7 +1,5 @@
 const { app, BrowserWindow } = require('electron')
 
-const isDev = () => process.env.NODE_ENV === 'development';
-
 function createWindow () {
   mainWindow = new BrowserWindow({
     width: 800,
@@ -10,10 +8,6 @@ function createWindow () {
       nodeIntegration: true
     }
   })
-
-  if (isDev) {
-    mainWindow.openDevTools();
-  }
   
   mainWindow.loadFile('index.html');
 
