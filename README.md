@@ -8,7 +8,7 @@ cd Quest-For-Gab-Time
 ``` 
 Then, run the following command to install the required packages: 
 ```
-npm ci
+npm install
 ```
 To run it:
 ```
