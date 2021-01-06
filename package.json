@@ -1,6 +1,6 @@
 {
   "name": "Quest-For-Gab-Time",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "This is a simple Game created by the LCHS iTeam using JavaScript and the Phaser library.",
   "main": "main.js",
   "scripts": {
