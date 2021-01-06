@@ -23,10 +23,10 @@ export class Scene4 extends Phaser.Scene {
     this.load.tilemapCSV('scene4col', 'assets/MapCSVs/level4col.csv');
     this.load.spritesheet('player', 'assets/Entities/player.png', { frameWidth: 32, frameHeight: 32 });
 
-    this.load.image('healthCrate', '/assets/Images/HealthCrateV1.png');
-    this.load.spritesheet('book', '/assets/Entities/FlyingBook.png',{ frameWidth: 32, frameHeight: 32 });
-    this.load.spritesheet('fireBall', '/assets/Entities/FireBallV2.png',{ frameWidth: 32, frameHeight: 32 });
-    this.load.spritesheet('doors', '/assets/Entities/doors.png',{ frameWidth: 32, frameHeight: 64 });
+    this.load.image('healthCrate', 'assets/Images/HealthCrateV1.png');
+    this.load.spritesheet('book', 'assets/Entities/FlyingBook.png',{ frameWidth: 32, frameHeight: 32 });
+    this.load.spritesheet('fireBall', 'assets/Entities/FireBallV2.png',{ frameWidth: 32, frameHeight: 32 });
+    this.load.spritesheet('doors', 'assets/Entities/doors.png',{ frameWidth: 32, frameHeight: 64 });
 }
 
 init (data)
@@ -90,7 +90,7 @@ init (data)
     var csvSplitTwice = []
 
     Promise.all([
-      fetch('/assets/MapCSVs/level4col.csv').then(x => x.text()),
+      fetch('assets/MapCSVs/level4col.csv').then(x => x.text()),
     ]).then((response) => {
       var responeSplitByNewLines = response[0].split("\n")
       var csvSpiltCounter = 0

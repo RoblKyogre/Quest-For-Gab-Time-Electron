@@ -23,10 +23,10 @@ export class Scene5 extends Phaser.Scene {
     this.load.tilemapCSV('scene5col', 'assets/MapCSVs/level5col.csv');
     this.load.spritesheet('player', 'assets/Entities/player.png', { frameWidth: 32, frameHeight: 32 });
 
-    this.load.image('healthCrate', '/assets/Images/HealthCrateV1.png');
-    this.load.spritesheet('book', '/assets/Entities/FlyingBook.png',{ frameWidth: 32, frameHeight: 32 });
-    this.load.spritesheet('fireBall', '/assets/Entities/FireBallV2.png',{ frameWidth: 32, frameHeight: 32 });
-    this.load.spritesheet('doors', '/assets/Entities/doors.png',{ frameWidth: 32, frameHeight: 64 });
+    this.load.image('healthCrate', 'assets/Images/HealthCrateV1.png');
+    this.load.spritesheet('book', 'assets/Entities/FlyingBook.png',{ frameWidth: 32, frameHeight: 32 });
+    this.load.spritesheet('fireBall', 'assets/Entities/FireBallV2.png',{ frameWidth: 32, frameHeight: 32 });
+    this.load.spritesheet('doors', 'assets/Entities/doors.png',{ frameWidth: 32, frameHeight: 64 });
 }
 
 init (data)
