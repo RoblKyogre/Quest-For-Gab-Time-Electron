@@ -1,6 +1,6 @@
-import { fireball } from '/src/classes/Fireball.js';
-import { tripleFireball } from '/src/classes/TripleFireball.js';
-import { bigFireball } from '/src/classes/BigFireball.js';
+import { fireball } from './classes/Fireball.js';
+import { tripleFireball } from './classes/TripleFireball.js';
+import { bigFireball } from './classes/BigFireball.js';
 
 
 export function makeFunctions(that) {

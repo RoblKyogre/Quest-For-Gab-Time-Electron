@@ -1,4 +1,4 @@
-import { initPathfinding } from '/src/classes/Pathfinding.js';
+import { initPathfinding } from './classes/Pathfinding.js';
 
 export class init extends Phaser.Scene {
 

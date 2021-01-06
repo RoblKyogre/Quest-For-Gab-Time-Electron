@@ -1,8 +1,8 @@
-import { makeFunctions } from '/src/AuxFunctions.js';
-import { controller } from '/src/AuxFunctions.js';
-import { healthCrate } from '/src/classes/healthCrate.js';
-import { bookEnemy } from '/src/classes/bookEntity.js';
-import { makeDoor } from '/src/classes/door.js';
+import { makeFunctions } from '../AuxFunctions.js';
+import { controller } from '../AuxFunctions.js';
+import { healthCrate } from '../classes/healthCrate.js';
+import { bookEnemy } from '../classes/bookEntity.js';
+import { makeDoor } from '../classes/door.js';
 
 export class Scene4 extends Phaser.Scene {
 
