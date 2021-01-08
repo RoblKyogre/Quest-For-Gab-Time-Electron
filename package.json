@@ -39,8 +39,9 @@
           "name": "@electron-forge/maker-squirrel",
           "config": {
             "name": "Quest_For_Gab_Time",
-            "iconUrl": "https://github.com/RoblKyogre/Quest-For-Gab-Time-Electron/raw/master/assets/windows-icon.ico",
-            "setupIcon": "https://github.com/RoblKyogre/Quest-For-Gab-Time-Electron/raw/master/assets/windows-icon.ico"
+            "iconUrl": "[...]/assets/windows-icon.ico",
+            "setupIcon": "[...]/assets/windows-icon.ico",
+            "skipUpdateIcon": true
           }
         },
         {
