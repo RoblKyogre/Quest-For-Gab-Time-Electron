@@ -33,6 +33,11 @@ jobs:
       with:
         name: rpm
         path: ./out/make/rpm/x64/*.rpm
+    - name: Upload .flatpak Artifact
+      uses: actions/upload-artifact@master
+      with:
+        name: flatpak
+        path: ./out/make/flatpak/x64/*.flatpak
 
   build-mac:
 
@@ -97,3 +102,4 @@ jobs:
             ./rpm/*.rpm
             ./mac/*.dmg
             ./win/*.exe
+            ./flatpak/*.flatpak

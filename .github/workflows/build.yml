@@ -23,16 +23,6 @@ jobs:
       run: npm install
     - name: Create Distributable
       run: npm run make
-    - name: Upload .deb Artifact
-      uses: actions/upload-artifact@master
-      with:
-        name: deb
-        path: ./out/make/deb/x64/*.deb
-    - name: Upload .rpm Artifact
-      uses: actions/upload-artifact@master
-      with:
-        name: rpm
-        path: ./out/make/rpm/x64/*.rpm
 
   build-mac:
 
@@ -48,11 +38,6 @@ jobs:
       run: npm install
     - name: Create Distributable
       run: npm run make
-    - name: Upload Artifacts
-      uses: actions/upload-artifact@master
-      with:
-        name: mac
-        path: ./out/make/*.dmg
 
   build-windows:
 
@@ -68,8 +53,3 @@ jobs:
       run: npm install
     - name: Create Distributable
       run: npm run make
-    - name: Upload Artifacts
-      uses: actions/upload-artifact@master
-      with:
-        name: win
-        path: ./out/make/squirrel.windows/x64/*.exe
