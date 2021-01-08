@@ -50,11 +50,15 @@
         },
         {
           "name": "@electron-forge/maker-deb",
-          "config": {}
+          "config": {
+            "icon": "assets/favicon-32x32.png"
+          }
         },
         {
           "name": "@electron-forge/maker-rpm",
-          "config": {}
+          "config": {
+            "icon": "assets/favicon-32x32.png"
+          }
         }
       ]
     }
