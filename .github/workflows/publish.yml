@@ -22,7 +22,7 @@ jobs:
     - name: Install Dependencies
       run: npm install
     - name: Install Flatpak Build Tools
-      run: sudo apt install flatpak flatpak-builder elfutils
+      run: sudo apt-get install flatpak flatpak-builder elfutils
     - name: Create Distributable
       run: npm run make
     - name: Upload .deb Artifact
