@@ -40,7 +40,8 @@
         {
           "name": "@electron-forge/maker-squirrel",
           "config": {
-            "name": "Quest_For_Gab_Time"
+            "name": "Quest_For_Gab_Time",
+            "setupIcon": "assets/icon.ico"
           }
         },
         {
