@@ -1,4 +1,4 @@
-# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# This workflow will do a clean install of node Dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
 name: Build and Publish Tagged Release
@@ -20,7 +20,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 15.x
-    - name: Install dependencies
+    - name: Install Dependencies
       run: npm install
     - name: Create Distributable
       run: npm run make
@@ -45,7 +45,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 15.x
-    - name: Install dependencies
+    - name: Install Dependencies
       run: npm install
     - name: Create Distributable
       run: npm run make
@@ -53,7 +53,7 @@ jobs:
       uses: actions/upload-artifact@master
       with:
         name: mac
-        path: ./out/make/zip/darwin/x64/*.zip
+        path: ./out/make/*.dmg
 
   build-windows:
 
@@ -65,7 +65,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 15.x
-    - name: Install dependencies
+    - name: Install Dependencies
       run: npm install
     - name: Create Distributable
       run: npm run make
@@ -94,5 +94,5 @@ jobs:
           files: |
             ./deb/*.deb
             ./rpm/*.rpm
-            ./mac/*.zip
+            ./mac/*.dmg
             ./win/*.exe
