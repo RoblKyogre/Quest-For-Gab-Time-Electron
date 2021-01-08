@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RoblKyogre/Quest-For-Gab-Time.git"
+    "url": "git+https://github.com/RoblKyogre/Quest-For-Gab-Time-Electron.git"
   },
   "keywords": [],
   "author": "LCHS iTeam & RoblKyogre",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/RoblKyogre/Quest-For-Gab-Time/issues"
+    "url": "https://github.com/RoblKyogre/Quest-For-Gab-Time-Electron/issues"
   },
-  "homepage": "https://github.com/RoblKyogre/Quest-For-Gab-Time#readme",
+  "homepage": "https://github.com/RoblKyogre/Quest-For-Gab-Time-Electron#readme",
   "devDependencies": {
     "@electron-forge/cli": "^6.0.0-beta.54",
     "@electron-forge/maker-deb": "^6.0.0-beta.54",
@@ -38,7 +38,9 @@
         {
           "name": "@electron-forge/maker-squirrel",
           "config": {
-            "name": "Quest_For_Gab_Time"
+            "name": "Quest_For_Gab_Time",
+            "iconUrl": "https://github.com/RoblKyogre/Quest-For-Gab-Time-Electron/raw/master/assets/windows-icon.ico",
+            "setupIcon": "https://github.com/RoblKyogre/Quest-For-Gab-Time-Electron/raw/master/assets/windows-icon.ico"
           }
         },
         {
