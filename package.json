@@ -33,15 +33,14 @@
   },
   "config": {
     "forge": {
-      "packagerConfig": {},
+      "packagerConfig": {
+        "icon": "assets/icon"
+      },
       "makers": [
         {
           "name": "@electron-forge/maker-squirrel",
           "config": {
-            "name": "Quest_For_Gab_Time",
-            "iconUrl": "[...]/assets/windows-icon.ico",
-            "setupIcon": "[...]/assets/windows-icon.ico",
-            "skipUpdateIcon": true
+            "name": "Quest_For_Gab_Time"
           }
         },
         {
