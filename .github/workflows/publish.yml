@@ -48,6 +48,8 @@ jobs:
       run: npm install
     - name: Create Distributable
       run: npm run make
+    - name: Display structure files
+      run: ls -R ./out
     - name: Upload Artifacts
       uses: actions/upload-artifact@master
       with:
