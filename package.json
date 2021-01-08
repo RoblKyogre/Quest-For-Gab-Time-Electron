@@ -52,19 +52,27 @@
         {
           "name": "@electron-forge/maker-deb",
           "config": {
-            "icon": "assets/favicon-32x32.png"
+            "options": {
+              "icon": "assets/favicon-32x32.png"
+            }
           }
         },
         {
           "name": "@electron-forge/maker-rpm",
           "config": {
-            "icon": "assets/favicon-32x32.png"
+            "options": {
+              "icon": "assets/favicon-32x32.png"
+            }
           }
         },
         {
           "name": "@electron-forge/maker-flatpak",
           "config": {
-            "icon": "assets/favicon-32x32.png"
+            "options": {
+              "icon": "assets/favicon-32x32.png",
+              "base": "io.atom.electron.BaseApp",
+              "base-version": "stable"
+            }
           }
         }
       ]
