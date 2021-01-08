@@ -25,7 +25,7 @@ jobs:
       run: |
         sudo apt-get install flatpak flatpak-builder elfutils
         sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-        flatpak install -y flathub io.atom.electron.BaseApp//stable
+        sudo flatpak install -y flathub io.atom.electron.BaseApp//stable
     - name: Create Distributable
       run: npm run make
     - name: Upload .deb Artifact
