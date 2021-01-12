@@ -76,7 +76,7 @@ jobs:
     - name: Upload .nupkg Artifact
       uses: actions/upload-artifact@master
       with:
-        name: exe
+        name: nupkg
         path: ./out/make/squirrel.windows/x64/*.nupkg
 
   publish:
