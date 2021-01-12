@@ -64,7 +64,7 @@ app.on('ready', () => {
     console.error(message)
   })
 
-  autoUpdater.on('checking-for-update', () => console.log('Checking for Updates...'))
+  autoUpdater.on('checking-for-update', () => console.log('Checking for Updates...', autoUpdater.getFeedURL()))
   autoUpdater.on('update-available', () => console.log('Update Available'))
   autoUpdater.on('update-not-available', () => console.log('No Updates Available'))
 
