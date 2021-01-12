@@ -49,10 +49,10 @@ jobs:
       run: npm install
     - name: Create Distributable
       run: npm run make
-    - name: Upload Artifacts
+    - name: Upload .dmg Artifact
       uses: actions/upload-artifact@master
       with:
-        name: mac
+        name: dmg
         path: ./out/make/*.dmg
 
   build-windows:
@@ -69,11 +69,16 @@ jobs:
       run: npm install
     - name: Create Distributable
       run: npm run make
-    - name: Upload Artifacts
+    - name: Upload .exe Artifact
       uses: actions/upload-artifact@master
       with:
-        name: win
+        name: exe
         path: ./out/make/squirrel.windows/x64/*.exe
+    - name: Upload .nupkg Artifact
+      uses: actions/upload-artifact@master
+      with:
+        name: exe
+        path: ./out/make/squirrel.windows/x64/*.nupkg
 
   publish-tagged-release:
 
@@ -94,5 +99,6 @@ jobs:
           files: |
             ./deb/*.deb
             ./rpm/*.rpm
-            ./mac/*.dmg
-            ./win/*.exe
+            ./dmg/*.dmg
+            ./exe/*.exe
+            ./nupkg/*.nupkg
