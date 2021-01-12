@@ -79,6 +79,11 @@ jobs:
       with:
         name: nupkg
         path: ./out/make/squirrel.windows/x64/*.nupkg
+    - name: Upload RELEASES Artifact
+      uses: actions/upload-artifact@master
+      with:
+        name: RELEASES
+        path: ./out/make/squirrel.windows/x64/RELEASES
 
   publish-tagged-release:
 
@@ -102,3 +107,4 @@ jobs:
             ./dmg/*.dmg
             ./exe/*.exe
             ./nupkg/*.nupkg
+            ./RELEASES/RELEASES
