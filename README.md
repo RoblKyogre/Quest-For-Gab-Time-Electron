@@ -1,6 +1,6 @@
 # Quest-For-Gab-Time
 
-[![GitHub all releases](https://img.shields.io/github/downloads/roblkyogre/Quest-For-Gab-Time-Electron/total)](https://hazel.roblkyogre.vercel.app/download)
+[![GitHub all releases](https://img.shields.io/github/downloads/roblkyogre/Quest-For-Gab-Time-Electron/total)](https://gabtimeupdate.vercel.app/download)
 
 This is a simple Game created by the LCHS iTeam using JavaScript and the Phaser library.
 
