@@ -27,7 +27,7 @@ function showNotification (title, body) {
 
 function setupUpdates () {
   if (!isDev) {
-    const server = "https://hazel.roblkyogre.vercel.app"
+    const server = "https://gabtimeupdate.vercel.app/"
     const feed = `${server}/update/${process.platform}/${app.getVersion()}`
 
     autoUpdater.setFeedURL(feed);
